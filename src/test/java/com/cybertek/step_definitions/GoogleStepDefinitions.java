@@ -15,7 +15,7 @@ public class GoogleStepDefinitions {
 
     @Then("user should see title is Google")
     public void user_should_see_title_is_google() {
-
+    //comparing actual title vs expected title
         String actualTitle = Driver.getDriver().getTitle();
         String expectedTitle = "Google";
         Assert.assertEquals("Actual title doesn't match expected title!", actualTitle, expectedTitle);
