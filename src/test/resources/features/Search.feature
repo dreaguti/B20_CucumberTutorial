@@ -8,14 +8,13 @@ Feature: Search
     Given user is on the google search page
     Then user should see title is Google
 
-  Scenario:
+  Scenario: Google title verification after search
     When user searches apple
     Then user should see apple in the title
 
   @wip #workinprogress -- can be anything
-  Scenario:
+  Scenario: Google title verification after search
     When user searches "dolphin"
     Then user should see "dolphin" in the title
     #"string" -- putting quotes around it makes it parameterization
     #just change the search value in the feature file and it will run accordingly
-
