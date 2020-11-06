@@ -20,6 +20,14 @@ Feature: Login
     Then user should see dashboard
 
   @admin @db
+    #before runs here
+      #beforeStep runs here
   Scenario: Admin login scenario
+    #afterStep runs here
+    #beforeStep runs here
     When user logs in as an admin
+    #afterStep runs here
+    #beforeStep runs here
     Then user should see dashboard
+    #afterStep runs here
+  #after runs here
