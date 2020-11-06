@@ -24,15 +24,15 @@ public class GoogleStepDefinitions {
 
     @When("user searches apple")
     public void userSearchesApple() {
-
-    }
-
-    @Then("user should see apple in the title")
-    public void userShouldSeeAppleInTheTitle() {
         //creating the page object
         GoogleSearchPage googleSearchPage=new GoogleSearchPage();
 
         //sending value into search box using page object
         googleSearchPage.searchBox.sendKeys("apple");
+    }
+
+    @Then("user should see apple in the title")
+    public void userShouldSeeAppleInTheTitle() {
+
     }
 }
