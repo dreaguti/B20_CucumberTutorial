@@ -12,7 +12,7 @@ Feature: Search
     When user searches apple
     Then user should see apple in the title
 
-  @wip #workinprogress -- can be anything
+  @wip #workinprogress -- can be anything (usually moved to whatever the current scenario is)
   Scenario: Google title verification after search
     When user searches "dolphin"
     Then user should see "dolphin" in the title
