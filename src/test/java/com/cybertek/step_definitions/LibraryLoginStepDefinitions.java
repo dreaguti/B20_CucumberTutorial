@@ -19,4 +19,16 @@ public class LibraryLoginStepDefinitions {
     public void user_should_see_dashboard() {
         System.out.println("-> User should see dashboard");
     }
+
+
+    @When("user logs in as a student")
+    public void user_logs_in_as_a_student() {
+        System.out.println("-> User logs in as a student");
+    }
+
+    @When("user logs in as an admin")
+    public void user_logs_in_as_an_admin() {
+        System.out.println("-> User logs in as admin");
+    }
+
 }
