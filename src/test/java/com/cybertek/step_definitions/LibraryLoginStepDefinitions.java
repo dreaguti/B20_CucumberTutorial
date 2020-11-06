@@ -12,7 +12,7 @@ public class LibraryLoginStepDefinitions {
 
     @When("user logs in as a librarian")
     public void user_logs_in_as_a_librarian() {
-        System.out.println("-> User logs in as librarian");
+        System.out.println("-> User logs in as a librarian");
     }
 
     @Then("user should see dashboard")
