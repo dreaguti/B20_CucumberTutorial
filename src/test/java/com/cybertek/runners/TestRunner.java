@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "com/cybertek/step_definitions",
         dryRun = false,
-        tags =  "@librarian and @employee"
+        tags =  "@login and not @librarian"
 )
 
 public class TestRunner {
