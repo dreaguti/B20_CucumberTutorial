@@ -20,7 +20,7 @@ public class Hooks {
         System.out.println("-----> After annotation: Closing browser <-----");
     }
 
-    @After
+    @After("@db")
     public void tearDownDatabaseConnection() {
         System.out.println("-----> AFTER ANNOTATION: DB CONNECTION CLOSED <-----");
     }
