@@ -8,4 +8,4 @@ Feature: Login
   Scenario: Librarian login scenario
     Given user is on the login page
     When user logs in as a librarian
-    Then user should be able to see dashboard
+    Then user should see dashboard
