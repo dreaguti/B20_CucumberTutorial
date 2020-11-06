@@ -6,6 +6,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.Keys;
 
 public class GoogleStepDefinitions {
     @Given("user is on the google search page")
@@ -28,11 +29,14 @@ public class GoogleStepDefinitions {
         GoogleSearchPage googleSearchPage=new GoogleSearchPage();
 
         //sending value into search box using page object
-        googleSearchPage.searchBox.sendKeys("apple");
+        googleSearchPage.searchBox.sendKeys("apple" + Keys.ENTER);
     }
 
     @Then("user should see apple in the title")
     public void userShouldSeeAppleInTheTitle() {
+        String expectedTitle="apple - Google Search";
+        String actualTitle=Driver.getDriver().getTitle();
 
+        Assert.assertEquals("Actual title doesn't match expected title", actualTitle, expectedTitle);
     }
 }
