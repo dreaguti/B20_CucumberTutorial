@@ -21,6 +21,7 @@ public class Hooks {
     }
 
     @After
-    public void tearDownDatabaseConnection(){
+    public void tearDownDatabaseConnection() {
         System.out.println("-----> AFTER ANNOTATION: DB CONNECTION CLOSED <-----");
+    }
 }
