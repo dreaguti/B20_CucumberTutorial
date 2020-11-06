@@ -9,8 +9,7 @@ Feature: Login
     Given user is on the login page
     #instead of having this line repeat, we can just copy/paste it here and remove it from below:
 
-
-  @librarian @employee
+  @librarian
   Scenario: Librarian login scenario
     When user logs in as a librarian
     Then user should see dashboard
@@ -20,7 +19,7 @@ Feature: Login
     When user logs in as a student
     Then user should see dashboard
 
-  @admin @employee
+  @admin @db
   Scenario: Admin login scenario
     When user logs in as an admin
     Then user should see dashboard
