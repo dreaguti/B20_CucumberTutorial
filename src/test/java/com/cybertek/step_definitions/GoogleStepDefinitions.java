@@ -1,5 +1,6 @@
 package com.cybertek.step_definitions;
 
+import com.cybertek.pages.GoogleSearchPage;
 import com.cybertek.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -23,6 +24,11 @@ public class GoogleStepDefinitions {
 
     @When("user searches apple")
     public void userSearchesApple() {
+        //creating the page object
+        GoogleSearchPage googleSearchPage=new GoogleSearchPage();
+
+        //sending value into search box using page object
+        googleSearchPage.searchBox.sendKeys("apple");
     }
 
     @Then("user should see apple in the title")
