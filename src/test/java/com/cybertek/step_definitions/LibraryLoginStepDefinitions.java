@@ -15,8 +15,8 @@ public class LibraryLoginStepDefinitions {
 
     }
 
-    @Then("user should be able to see dashboard")
-    public void user_should_be_able_to_see_dashboard() {
+    @Then("user should see dashboard")
+    public void user_should_see_dashboard() {
 
     }
 }
