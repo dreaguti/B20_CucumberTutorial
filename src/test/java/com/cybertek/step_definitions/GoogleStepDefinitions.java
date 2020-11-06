@@ -39,4 +39,18 @@ public class GoogleStepDefinitions {
 
         Assert.assertEquals("Actual title doesn't match expected title", actualTitle, expectedTitle);
     }
+
+    @When("user searches {string}")
+    public void userSearches(String searchValue) {
+        GoogleSearchPage googleSearchPage=new GoogleSearchPage();
+        googleSearchPage.searchBox.sendKeys(searchValue + Keys.ENTER);
+    }
+
+    @Then("user should see {string} in the title")
+    public void userShouldSeeInTheTitle(String searchValue) {
+        //basically just change everything to what you chose to name your string and concatenate
+        String expectedTitle=searchValue + " - Google Search";
+        String actualTitle=Driver.getDriver().getTitle();
+        Assert.assertEquals(actualTitle, expectedTitle);
+    }
 }

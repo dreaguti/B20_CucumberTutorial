@@ -8,9 +8,14 @@ Feature: Search
     Given user is on the google search page
     Then user should see title is Google
 
-    @wip #workinprogress -- can be anything
-      #"apple" -- putting quotes around it makes it parameterization
   Scenario:
-    When user searches "apple"
-    Then user should see "apple" in the title
+    When user searches apple
+    Then user should see apple in the title
+
+  @wip #workinprogress -- can be anything
+  Scenario:
+    When user searches "dolphin"
+    Then user should see "dolphin" in the title
+    #"string" -- putting quotes around it makes it parameterization
+    #just change the search value in the feature file and it will run accordingly
 
