@@ -18,3 +18,9 @@ Feature: Search
     Then user should see "dolphin" in the title
     #"string" -- putting quotes around it makes it parameterization
     #just change the search value in the feature file and it will run accordingly
+
+  @about
+  Scenario: Google ABOUT link page title verification
+    Then user should see About link
+    And user clicks on About link
+    Then user should be able to see title Google - About Google, Our Culture & Company News

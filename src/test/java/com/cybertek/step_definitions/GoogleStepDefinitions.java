@@ -53,4 +53,9 @@ public class GoogleStepDefinitions {
         String actualTitle=Driver.getDriver().getTitle();
         Assert.assertEquals(actualTitle, expectedTitle);
     }
+
+    @Then("user should see About link")
+    public void user_should_see_about_link() {
+
+    }
 }
