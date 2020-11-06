@@ -6,7 +6,7 @@ import io.cucumber.java.en.Then;
 import org.junit.Assert;
 
 public class GoogleStepDefinitions {
-    @Given("User is on the google search page")
+    @Given("user is on the google search page")
     public void user_is_on_the_google_search_page() {
         //Assert.fail("failing test on purpose"); -- just to see it on report
         Driver.getDriver().get("https://www.google.com");
