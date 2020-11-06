@@ -9,6 +9,11 @@ import org.junit.Assert;
 import org.openqa.selenium.Keys;
 
 public class GoogleStepDefinitions {
+
+    //creating the page object
+    GoogleSearchPage googleSearchPage=new GoogleSearchPage();
+
+
     @Given("user is on the google search page")
     public void user_is_on_the_google_search_page() {
         //Assert.fail("failing test on purpose"); -- just to see it on report
@@ -25,8 +30,8 @@ public class GoogleStepDefinitions {
 
     @When("user searches apple")
     public void userSearchesApple() {
-        //creating the page object
-        GoogleSearchPage googleSearchPage=new GoogleSearchPage();
+//        //creating the page object
+//        GoogleSearchPage googleSearchPage=new GoogleSearchPage(); moved so it can be reused
 
         //sending value into search box using page object
         googleSearchPage.searchBox.sendKeys("apple" + Keys.ENTER);
@@ -56,6 +61,17 @@ public class GoogleStepDefinitions {
 
     @Then("user should see About link")
     public void user_should_see_about_link() {
+        Assert.assertTrue(googleSearchPage.aboutLink.isDisplayed());
+    }
+    @Then("user clicks on About link")
+    public void user_clicks_on_about_link() {
+    googleSearchPage.aboutLink.click();
+    }
 
+    @Then("user should be able to see title Google - About Google, Our Culture & Company News")
+    public void user_should_be_able_to_see_title_google_about_google_our_culture_company_news() {
+    String expectedTitle="Google - About Google, Our Culture & Company News";
+    String actualTitle=Driver.getDriver().getTitle();
+    Assert.assertEquals(actualTitle,expectedTitle);
     }
 }
