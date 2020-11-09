@@ -14,7 +14,7 @@ public class EtsyStepDefinitions {
     @Then("user should see title is as expected")
     public void userShouldSeeTitleIsAsExpected() {
         String actualTitle=Driver.getDriver().getTitle();
-        String expectedTitle="Etsy - Shop for handmade, vintage, custome, and unique gifts for everyone";
+        String expectedTitle="Etsy - Shop for handmade, vintage, custom, and unique gifts for everyone";
         Assert.assertEquals(actualTitle, expectedTitle);
     }
 }
