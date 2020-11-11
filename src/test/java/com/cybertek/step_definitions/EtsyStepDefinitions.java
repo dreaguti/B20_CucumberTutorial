@@ -23,14 +23,17 @@ public class EtsyStepDefinitions {
     }
 
     @When("user searches {string} in the search box")
-    public void userSearchesInTheSearchBox(String arg0) {
+    public void userSearchesInTheSearchBox(String searchValue) {
+        Driver.getDriver().get("https://www.etsy.com");
+
     }
 
     @And("user clicks on search button")
     public void userClicksOnSearchButton() {
+
     }
 
     @Then("user will see {string} in the title")
-    public void userWillSeeInTheTitle(String arg0) {
+    public void userWillSeeInTheTitle(String searchValue) {
     }
 }
