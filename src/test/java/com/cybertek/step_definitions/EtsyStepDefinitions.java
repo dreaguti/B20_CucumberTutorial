@@ -1,6 +1,7 @@
 package com.cybertek.step_definitions;
 
 import com.cybertek.utilities.Driver;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -22,12 +23,14 @@ public class EtsyStepDefinitions {
     }
 
     @When("user searches {string} in the search box")
-    public void userSearchesInTheSearchBox(String searchTerm) {
-        Driver.getDriver().get("https://www.etsy.com");
+    public void userSearchesInTheSearchBox(String arg0) {
+    }
+
+    @And("user clicks on search button")
+    public void userClicksOnSearchButton() {
     }
 
     @Then("user will see {string} in the title")
-    public void userWillSeeInTheTitle(String searchTerm) {
-        String expectedTitle=searchTerm+" | Etsy";
+    public void userWillSeeInTheTitle(String arg0) {
     }
 }

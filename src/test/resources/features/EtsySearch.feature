@@ -13,4 +13,5 @@ Feature: Etsy search feature
   @etsySearchWip
   Scenario: Title verification after search term
     When user searches "wooden spoon" in the search box
+    And user clicks on search button
     Then user will see "wooden spoon" in the title
