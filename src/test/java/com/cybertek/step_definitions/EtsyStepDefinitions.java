@@ -3,6 +3,7 @@ package com.cybertek.step_definitions;
 import com.cybertek.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import org.junit.Assert;
 
 public class EtsyStepDefinitions {
@@ -18,5 +19,15 @@ public class EtsyStepDefinitions {
         String actualTitle = Driver.getDriver().getTitle();
         String expectedTitle = "Etsy - Shop for handmade, vintage, custom, and unique gifts for everyone";
         Assert.assertEquals(actualTitle, expectedTitle);
+    }
+
+    @When("user searches {string} in the search box")
+    public void userSearchesInTheSearchBox(String searchTerm) {
+        Driver.getDriver().get("https://www.etsy.com");
+    }
+
+    @Then("user will see {string} in the title")
+    public void userWillSeeInTheTitle(String searchTerm) {
+        String expectedTitle=searchTerm+" | Etsy";
     }
 }
