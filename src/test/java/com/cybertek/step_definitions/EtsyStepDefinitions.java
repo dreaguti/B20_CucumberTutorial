@@ -27,7 +27,7 @@ public class EtsyStepDefinitions {
 
     @When("user searches {string} in the search box")
     public void userSearchesInTheSearchBox(String searchValue) {
-        etsySearchPage.searchBox.sendKeys("wooden spoon");
+        etsySearchPage.searchBox.sendKeys(searchValue);
     }
 
     @And("user clicks on search button")
