@@ -4,13 +4,13 @@ Feature: Etsy search feature
 
   Background: User is on the etsy home page
 
-  @etsyTitle
+
   Scenario: Title verification
     Then user should see title is as expected
 
     #expected: Etsy - Shop for handmade, vintage, custom, and unique gifts for everyone
 
-  @etsySearchWip
+  @etsyWip
   Scenario: Title verification after search term
     When user searches "wooden spoon" in the search box
     And user clicks on search button

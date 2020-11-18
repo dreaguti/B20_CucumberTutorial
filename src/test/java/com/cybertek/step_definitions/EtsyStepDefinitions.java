@@ -1,5 +1,6 @@
 package com.cybertek.step_definitions;
 
+import com.cybertek.pages.EtsySearchPage;
 import com.cybertek.utilities.Driver;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -9,6 +10,8 @@ import org.junit.Assert;
 
 public class EtsyStepDefinitions {
     //Windows shortcut - Alt+Enter
+
+    EtsySearchPage etsySearchPage=new EtsySearchPage();
 
     @Given("user is on the etsy home page")
     public void user_is_on_the_etsy_home_page() {
@@ -24,16 +27,17 @@ public class EtsyStepDefinitions {
 
     @When("user searches {string} in the search box")
     public void userSearchesInTheSearchBox(String searchValue) {
-        Driver.getDriver().get("https://www.etsy.com");
-
+        etsySearchPage.searchBox.sendKeys("wooden spoon");
     }
 
     @And("user clicks on search button")
     public void userClicksOnSearchButton() {
-
+        etsySearchPage.searchButton.click();
     }
 
     @Then("user will see {string} in the title")
-    public void userWillSeeInTheTitle(String searchValue) {
+    public void userWillSeeInTheTitle(String expectedInTitle) {
+        String actualTitle=Driver.getDriver().getTitle();
+        Assert.assertTrue(actualTitle.contains(expectedInTitle));
     }
 }
