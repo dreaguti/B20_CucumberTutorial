@@ -35,8 +35,8 @@ public class EtsyStepDefinitions {
         etsySearchPage.searchButton.click();
     }
 
-    @Then("user will see {string} in the title")
-    public void userWillSeeInTheTitle(String expectedInTitle) {
+    @Then("user should see {string} in the Etsy title")
+    public void userShouldSeeInTheEtsyTitle(String expectedInTitle) {
         String actualTitle=Driver.getDriver().getTitle();
         Assert.assertTrue(actualTitle.contains(expectedInTitle));
     }
