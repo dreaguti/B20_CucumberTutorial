@@ -27,12 +27,12 @@ public class EtsyStepDefinitions {
 
     @When("user searches {string} in the search box")
     public void userSearchesInTheSearchBox(String searchValue) {
-        etsySearchPage.searchBox.sendKeys(searchValue);
+        etsySearchPage.etsySearchBox.sendKeys(searchValue);
     }
 
     @And("user clicks on search button")
     public void userClicksOnSearchButton() {
-        etsySearchPage.searchButton.click();
+        etsySearchPage.etsySearchButton.click();
     }
 
     @Then("user should see {string} in the Etsy title")
